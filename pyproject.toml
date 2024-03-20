@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "zoning-map"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+packages = [
+    {include = "crawler", from = "get-data"},
+    {include = "unzip", from = "get-data"},
+    {include = "create-map"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.18.1"
+chromedriver-binary-auto = "^0.3.1"
+beautifulsoup4 = "^4.12.3"
+ipyleaflet = "^0.18.2"
+lxml = "^5.1.0"
+tqdm = "^4.66.2"
+jupyterlab = "^4.1.4"
+
+[tool.pytest.ini_options]
+pythonpath = "my_python_project"
+testpaths = ["tests",]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
