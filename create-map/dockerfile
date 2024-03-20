@@ -1,0 +1,11 @@
+FROM python:3.9
+
+SHELL ["/bin/bash", "-c"]
+
+RUN apt-get update
+
+RUN mkdir create-map
+
+RUN pip install --upgrade pip 
+
+RUN pip install notebook
